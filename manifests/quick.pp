@@ -25,7 +25,7 @@ define home::quick() {
     $gid = $s[2]
 
     File {
-        owner => $uid, group => $gid, mode => 0640,
+        owner => $uid, group => $gid, mode => '0640',
     }
 
     file {
@@ -34,7 +34,7 @@ define home::quick() {
         "${dir}":
             ensure => directory,
             recurse => false,
-            mode => 0700;
+            mode => '0700';
 
 # \implements{macosxstig}{GEN001860 M6}%
 # \implements{unixsrg}{GEN001860,GEN001870,GEN001880}%
